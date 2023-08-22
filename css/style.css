@@ -5,24 +5,25 @@
     --filter-bg-color: #DEEBFF;
 }
 
+body{
+    margin: 0;
+}
+
 i {    /*toutes les icones sont en bleu*/
     color: var(--main-color);
 }
 
-body {
+.main-container {
     font-family: 'Raleway', serif, sans-serif;
     font-size: 16px; /* taille de police de base pour tout le document*/
-    margin :auto;
-}
-
-.main-container {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
-}
+    margin :auto;
+}    
 
-section, aside {
+section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
@@ -211,6 +212,7 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 
@@ -293,11 +295,11 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
 }
 .cardA a {
     flex-direction: column;
-    height: 445px;
+    height: 439px;
 }
 .cardA img {                                                                                                                                                                                                  
     width: 100%;
-    height: 389px;
+    height: 380px;
     border-radius: 20px 20px 0px 0px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
     object-fit: cover; /*redimensionne et positionne l'image*/
 }
@@ -353,7 +355,7 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
         justify-content: space-between;
     }
 
-    .populaires-cards .card {
+    .populaires-cards .cardP {
         width: 30%;
     }
 
@@ -363,6 +365,19 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
 
     .populaires-cards .card-subtitle {
         font-size: 13px;
+    }
+
+    
+    /*******activités********/
+    .activites{
+        width: 100%;
+    }
+    .cardA .card{
+        height: 270px;
+        box-sizing: border-box;
+    }
+    .cardA img{
+        height: 200px ;
     }
 }
 
