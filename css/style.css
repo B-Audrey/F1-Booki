@@ -311,6 +311,23 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
     padding: 0 !important;
 }
 
+/**********footer************/
+.piedDePage {
+    display: flex;
+    justify-content: flex-start;
+    padding : 2% 0% 2% 5%;
+    margin-top: 61px;
+}
+.piedDePage div{
+    display: flex;
+    width: 35%;
+    flex-direction: column;
+}
+.piedDePage a{
+    margin-bottom: 12px;
+}
+/*
+
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
