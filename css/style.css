@@ -331,6 +331,20 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
 /*
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -381,7 +395,183 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    
+    .main-container{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        }
+    /*******header*******/
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #logo {
+        margin: auto;
+        padding-top: 21px;
+    }
+    nav{
+        width: 100%;
+    }
+    .nav__bloc{
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+        margin-top: 49px;
+    }
+    .nav__link {
+        width: 50%; /*chaque lien prends 50% de la page*/
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+        border-bottom: 3px solid #F2F2F2;
+    }
+    .nav__link a {
+        font-weight: 500;
+        padding: 10px;
+    }
+    .nav__link:hover {
+        border-top: none !important;
+        border-bottom: 3px solid #0065FC; /*survol du bloc*/
+        color : #0065FC;  /*survol du texte*/
+    }
+    .nav__link a:hover {
+        border-top: none !important;
+        border-bottom: 3px solid #0065FC; /*survol du bloc*/
+        color : #0065FC;  /*survol du texte*/
+    }
+    /************barre de recherche**************/
+    .search{
+    width: 90%;
+    margin: auto;
+    }
+    .search__bloc{
+        width: 100%;
+        margin-top:20px;
+    }
+    .search__bloc--text {
+        display: none; /*desactive le "rechercher"*/
+    }
+    .search__bloc--logo  {
+        display: flex; /*affiche la balise contenant le logo*/
+        justify-content: center; /*centre horizontalement*/
+        align-items: center; /*centre verticalement*/
+        height: 100%;       
+        background-color: #0065FC; /* fond bleu*/
+        border-radius: 0px 15px 15px 0px; /*arrondi des bordures*/
+    }
+    .fa-solid.fa-magnifying-glass{
+        color: #FFFFFF; /*couleur de l'icone en blanc */
+    }
+/*************filtres**************/
+    .search__filter{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30px 70px 70px;
+        width: 100%;
+        margin-top: 24px;
+    }
+    .search__filter--text {
+        grid-column: 1/3;
+    }
+    .search__filter--critere{
+        align-items: center;
+        font-size : 11px !important; /*pour surpasser la règle des 17 px et forcer la diminution de police*/
+    }
+    .numberInfo{
+        align-items: center
+    }
+
+    /************cards***********/
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+    .card{
+        margin:auto;
+    }
+    .section-title{
+        margin-top: 28px;
+        margin-bottom: 26px;
+    }
+    .populaires {
+        border-radius: 0px;
+        padding-bottom: 47px;
+        margin-bottom: 0px;
+    }
+    .populaires-cards {
+        flex-direction: column;
+    }
+    .populaires-cards .cardP{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .cardP img{
+        max-width: 100%;
+    }
+/***********hebergements*********/
+    .hebergements{
+        background-color: #FFFFFF;
+    }
+    .hebergements h2{
+        margin-top: 26px;
+        margin-bottom: 19px;
+    }
+    .hebergements__card {
+        display: flex ; /*passe en flex pour la disposition verticale*/
+        flex-direction: column;
+    }
+    .cardH{
+        margin-top: 10px ;
+    }
+/***********activités*************/
+    .activites {
+        width: 85%;
+        margin: auto;
+    }
+    .activites__cards{
+        display: flex;
+        flex-direction: column; /*remets les cards en simple bloc les uns a la suite des autres*/
+    }
+    .cardA .card{
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .cardA img{
+        height: 141px;
+    }
+/**********pied de page*********/
+    .piedDePage{
+        flex-direction: column;
+        margin-top: 80px;
+        height: max-content;
+        max-height: max-content;
+    }
+    .piedDePage div{
+        width: 100%;
+    }
 }
