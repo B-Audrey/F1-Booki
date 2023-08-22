@@ -1,21 +1,20 @@
-/****** General ***********/
-* {
-    font-family: 'Raleway', sans-serif;
-}
-
+/*********** général ***********/
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
 }
 
-.fa-solid {
+i {    /*toutes les icones sont en bleu*/
     color: var(--main-color);
 }
 
 body {
-    display: flex;
-    justify-content: center;
+    font-family: 'Raleway', serif, sans-serif;
+    font-size: 16px; /* taille de police de base pour tout le document*/
+    margin :auto;
+    max-width: 1400px; /*ajuste la taille du body à la taille de la fenetre*/
+    width: 96%; /*maintien une marge sous les 1400px*/
 }
 
 .main-container {
@@ -29,6 +28,153 @@ body {
     margin: 0;
     font-size: 22px;
 }
+
+h1, .recherche__filtres p, h2, h3, h4, .hebergements > a, .recherche__barre--champs{
+    font-weight: 700;
+}
+.recherche__barre--picto, .hebergements, .populaires, .piedDePage{
+    background-color: #F2F2F2;
+}
+.hebergements, .populaires, .cardH a, .cardP a, .cardA a{
+    border-radius: 20px;
+}
+.nav__lien a, .piedDePage a, .hebergements > a, .cardA a, .cardH a, .cardP a, .cardA a{
+    color: #000000; /*texte en noir*/
+    text-decoration: none; /*annule le soulignement du lien*/
+}
+h1, h2, .recherche__filtres--critere i{
+    font-size: 22px;
+}
+h3, i.fa-solid.fa-location-dot, .recherche__barre--champs,.recherche__barre--texte, .hebergements > a, .fa-solid.fa-chart-line, .fa-solid.fa-magnifying-glass{
+    font-size: 18px;
+}
+
+
+/****************header*****************/
+header {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+nav, header, .nav__barre, .recherche, .recherche__barre, i.fa-solid.fa-location-dot, .recherche__filtres, .recherche__filtres--critere, .nombreDeLogements {
+    display: flex;
+}
+#logo {
+    width: 61.09px; /* défini la largeur donnée */
+    height: 19px; /*défini la hauteur donnée*/
+    margin-top: 30px;
+}
+.nav__barre {
+    flex-direction: row; /*positionne les liens en ligne*/
+    justify-content: flex-end; /* alignement à droite */
+    margin: 0; /* fixe la marge top à 0 pour le survol tout en haut de la page*/
+}
+.nav__lien {
+    list-style-type: none; /*enlèce les puces de la liste*/
+    padding-top: 18px; /*bloque la hauteur du padding pour la barre au survol*/
+    margin-left: 30%;
+}
+.nav__lien a {
+    padding-top: 16px; /*la hauteur du padding - les 2px de bordure apparentes*/ 
+}
+.nav__lien a:hover {
+    border-top: 2px #0065FC solid; /*fait apparaitre une bordure en haut au survol du lien*/
+    color:#0065FC;
+}
+
+/***************barre de recherche*****************/
+.recherche {
+    flex-direction: column;
+    width: 100%;
+}
+h1 {
+    margin-bottom: 8px; /*réduit la marge ave le paragraphe dessous*/
+}
+.recherche__texte {
+    margin-top: 0px; /*enleve la marge*/
+}
+.recherche__barre {
+    height: 49px;
+    width: 40%; /*occupe 40% de largeur du body*/
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.recherche__barre--picto {
+    border: 1px solid #F2F2F2; /*bordure du picto */
+    border-radius: 15px 0px 0px 15px; /*arrondi côté gauche */
+    width: 10%;
+}
+i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes du i*/
+    height: 49px; /*donne a la boite la meme hauteur que le formulaire */
+    align-items: center; /*centre verticalement */
+    justify-content: center; /*centre horizontalement */
+    color: #000000;
+}
+.recherche__barre--champs {
+    border: 1px solid #F2F2F2;
+    width: 70%;
+}
+.recherche__barre--bouton{
+    width: 20%;
+}
+.recherche__barre--texte {
+    height: 100%;
+    color: #FFFFFF;
+    background-color: #0065FC;
+    padding: 15px;
+    border: none; /*enleve la bordure automatique*/
+    border-radius: 0px 15px 15px 0px; /*arrondi des bordures*/
+}
+.recherche__barre--logo{
+    display: none; /*desactive le logo*/
+}
+
+/****************Filtres*****************/
+.recherche__filtres {
+    justify-content: space-between;
+    column-gap: 1%;
+    width: 70%; /*limite l'étalement sur la page */
+    align-items: center; /*centre verticalement */
+}
+.recherche__filtres--critere {
+    border: 2px solid #D9D9D9; /*ajoute la bordure à tous*/
+    border-radius: 25px; 
+    white-space: nowrap; /* annule le retour à la ligne du texte qui reste en une seule ligne */
+    padding: 10px 15px;
+}
+.recherche__filtres--critere i {
+    padding-right: 10px; /*pour l'espacement avec le texte*/
+}
+.recherche__filtres p{
+    font-size: 17px;
+}
+.recherche__filtres--critere:hover {
+    background: #DEEBFF;
+}
+
+
+/*********infos nbre logements*******/
+.nombreDeLogements, #picto_i {
+    align-items: center; /*centre le i et le texte sur l'axe vertical*/
+}
+#picto_i{
+    display: flex;
+    font-size: 12px;
+}
+.nombreDeLogements p{
+    padding-left: 10px;
+}
+#picto_i { /*boite du picto i pour faire le rond*/
+    justify-content: center; /*centre le i horizontalement*/
+    min-width: 24px; /*faire un carré et ne pas descendre de ces mesures même en version mobile*/
+    min-height: 24px;
+    border: 1px solid #D9D9D9; /*mettre la bordure*/
+    border-radius: 100%;  /*l'arrondir */
+}
+
+
+
+
 
 .card {
     background-color: white;

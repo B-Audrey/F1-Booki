@@ -16,7 +16,41 @@
 
 <body>
     <div class="main-container">
-        <header></header>
+        <header>
+            <img id="logo" src="images/logo/Booki.png" alt="Logo Booki">
+            <nav>
+                <ul class="nav__barre"> <!--contient deux ancres, lien sur les titres-->
+                    <li class="nav__lien"><a href="#lienHebergements">Hébergements</a></li>
+                    <li class="nav__lien"><a href="#lienActivites">Activités</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="recherche">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p class="recherche__texte">En plein centre-ville ou en pleine nature</p>
+            
+            <form class="recherche__barre" action="#" method="get"><!--Insert le formulaire-->        
+                <label for="lieu" class="recherche__barre--picto"><i class="fa-solid fa-location-dot"></i></label><!--défini la légende le picto de début pour l'input à id "lieu"-->
+                <input type="search" name="lieu" id="lieu" class="recherche__barre--champs"><!--insert le champs de recherche ayant pour id "lieu"-->               
+                <div class="recherche__barre--bouton"><!--insert le bouton recherche inactif-->
+                    <input type="button" id="bouton" value="Rechercher" class="recherche__barre--texte">
+                    <label for="bouton" class="recherche__barre--logo"><i class="fa-solid fa-magnifying-glass"></i></label> <!--Rattache le logo à l'input dessus-->
+                </div>
+            </form>
+
+            <div class="recherche__filtres">
+                <p class="recherche__filtres--texte">Filtres</p>
+                <p class="recherche__filtres--critere"><i class="fa-solid fa-money-bill-wave"></i>Économique</p>
+                <p class="recherche__filtres--critere"><i class="fa-solid fa-person"></i>Familial</p>
+                <p class="recherche__filtres--critere"><i class="fa-solid fa-heart"></i>Romantique</p>
+                <p class="recherche__filtres--critere"><i class="fa-solid fa-fire"></i></i>Nos pépites</p>
+            </div>
+
+            <div class="nombreDeLogements">
+                <div id="picto_i"><i class="fa-solid fa-info"></i></div>
+                <p> Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </div>
         <main>
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
@@ -86,5 +120,8 @@
         <footer></footer>
     </div>
 </body>
-
+ <!-- Insérer les icones via FontAwsome -->
+ <script src="https://kit.fontawesome.com/4c168a5617.js" crossorigin="anonymous"></script>
+ <!-- Ajoute les consignes pour adapter la taille de l'ecran selon les pixels du telephone utilisateur-->
+ <meta name="viewport" content="width=device-width,initial-scale=1" />
 </html>
