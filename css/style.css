@@ -13,8 +13,6 @@ body {
     font-family: 'Raleway', serif, sans-serif;
     font-size: 16px; /* taille de police de base pour tout le document*/
     margin :auto;
-    max-width: 1400px; /*ajuste la taille du body à la taille de la fenetre*/
-    width: 96%; /*maintien une marge sous les 1400px*/
 }
 
 .main-container {
@@ -24,28 +22,35 @@ body {
     box-sizing: border-box;
 }
 
+section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
 .section-title {
     margin: 0;
     font-size: 22px;
 }
 
-h1, .recherche__filtres p, h2, h3, h4, .hebergements > a, .recherche__barre--champs{
+h1,.euro, .search__filter p, h2, h3, .hebergements > a, .search__bloc--champs{
     font-weight: 700;
 }
-.recherche__barre--picto, .hebergements, .populaires, .piedDePage{
+.search__bloc--picto, .piedDePage{
     background-color: #F2F2F2;
 }
-.hebergements, .populaires, .cardH a, .cardP a, .cardA a{
+.cardH a, .cardP a, .cardA a{
     border-radius: 20px;
 }
-.nav__lien a, .piedDePage a, .hebergements > a, .cardA a, .cardH a, .cardP a, .cardA a{
-    color: #000000; /*texte en noir*/
+.nav__link a, .piedDePage a, .hebergements > a, .cardA a, .cardH a, .cardP a, .cardA a{
+    color: #000000; /*text en noir*/
     text-decoration: none; /*annule le soulignement du lien*/
 }
-h1, h2, .recherche__filtres--critere i{
+h1, h2, .search__filter--critere i{
     font-size: 22px;
 }
-h3, i.fa-solid.fa-location-dot, .recherche__barre--champs,.recherche__barre--texte, .hebergements > a, .fa-solid.fa-chart-line, .fa-solid.fa-magnifying-glass{
+h3, i.fa-solid.fa-location-dot, .search__bloc--champs,.search__bloc--text, .hebergements > a, .fa-solid.fa-chart-line, .fa-solid.fa-magnifying-glass{
     font-size: 18px;
 }
 
@@ -56,7 +61,7 @@ header {
     justify-content: space-between;
     margin-bottom: 30px;
 }
-nav, header, .nav__barre, .recherche, .recherche__barre, i.fa-solid.fa-location-dot, .recherche__filtres, .recherche__filtres--critere, .nombreDeLogements {
+nav, header, .nav__bloc, .search, .search__bloc, i.fa-solid.fa-location-dot, .search__filter, .search__filter--critere, .numberInfo {
     display: flex;
 }
 #logo {
@@ -64,42 +69,42 @@ nav, header, .nav__barre, .recherche, .recherche__barre, i.fa-solid.fa-location-
     height: 19px; /*défini la hauteur donnée*/
     margin-top: 30px;
 }
-.nav__barre {
+.nav__bloc {
     flex-direction: row; /*positionne les liens en ligne*/
     justify-content: flex-end; /* alignement à droite */
     margin: 0; /* fixe la marge top à 0 pour le survol tout en haut de la page*/
 }
-.nav__lien {
+.nav__link {
     list-style-type: none; /*enlèce les puces de la liste*/
-    padding-top: 18px; /*bloque la hauteur du padding pour la barre au survol*/
+    padding-top: 18px; /*bloque la hauteur du padding pour la bloc au survol*/
     margin-left: 30%;
 }
-.nav__lien a {
+.nav__link a {
     padding-top: 16px; /*la hauteur du padding - les 2px de bordure apparentes*/ 
 }
-.nav__lien a:hover {
+.nav__link a:hover {
     border-top: 2px #0065FC solid; /*fait apparaitre une bordure en haut au survol du lien*/
     color:#0065FC;
 }
 
-/***************barre de recherche*****************/
-.recherche {
+/***************bloc de search*****************/
+.search {
     flex-direction: column;
     width: 100%;
 }
 h1 {
     margin-bottom: 8px; /*réduit la marge ave le paragraphe dessous*/
 }
-.recherche__texte {
+.search__text {
     margin-top: 0px; /*enleve la marge*/
 }
-.recherche__barre {
+.search__bloc {
     height: 49px;
     width: 40%; /*occupe 40% de largeur du body*/
     margin-top: 5px;
     margin-bottom: 10px;
 }
-.recherche__barre--picto {
+.search__bloc--picto {
     border: 1px solid #F2F2F2; /*bordure du picto */
     border-radius: 15px 0px 0px 15px; /*arrondi côté gauche */
     width: 10%;
@@ -110,14 +115,14 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
     justify-content: center; /*centre horizontalement */
     color: #000000;
 }
-.recherche__barre--champs {
+.search__bloc--champs {
     border: 1px solid #F2F2F2;
     width: 70%;
 }
-.recherche__barre--bouton{
+.search__bloc--button{
     width: 20%;
 }
-.recherche__barre--texte {
+.search__bloc--text {
     height: 100%;
     color: #FFFFFF;
     background-color: #0065FC;
@@ -125,46 +130,44 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
     border: none; /*enleve la bordure automatique*/
     border-radius: 0px 15px 15px 0px; /*arrondi des bordures*/
 }
-.recherche__barre--logo{
+.search__bloc--logo{
     display: none; /*desactive le logo*/
 }
 
-/****************Filtres*****************/
-.recherche__filtres {
+/****************filter*****************/
+.search__filter {
     justify-content: space-between;
     column-gap: 1%;
     width: 70%; /*limite l'étalement sur la page */
     align-items: center; /*centre verticalement */
 }
-.recherche__filtres--critere {
+.search__filter--critere {
     border: 2px solid #D9D9D9; /*ajoute la bordure à tous*/
     border-radius: 25px; 
-    white-space: nowrap; /* annule le retour à la ligne du texte qui reste en une seule ligne */
+    white-space: nowrap; /* annule le retour à la ligne du text qui reste en une seule ligne */
     padding: 10px 15px;
 }
-.recherche__filtres--critere i {
-    padding-right: 10px; /*pour l'espacement avec le texte*/
+.search__filter--critere i {
+    padding-right: 10px; /*pour l'espacement avec le text*/
 }
-.recherche__filtres p{
+.search__filter p{
     font-size: 17px;
 }
-.recherche__filtres--critere:hover {
+.search__filter--critere:hover {
     background: #DEEBFF;
 }
 
 
 /*********infos nbre logements*******/
-.nombreDeLogements, #picto_i {
-    align-items: center; /*centre le i et le texte sur l'axe vertical*/
+.numberInfo, #picto_i {
+    align-items: center; /*centre le i et le text sur l'axe vertical*/
 }
-#picto_i{
-    display: flex;
-    font-size: 12px;
-}
-.nombreDeLogements p{
+.numberInfo p{
     padding-left: 10px;
 }
 #picto_i { /*boite du picto i pour faire le rond*/
+    display: flex;
+    font-size: 12px;
     justify-content: center; /*centre le i horizontalement*/
     min-width: 24px; /*faire un carré et ne pas descendre de ces mesures même en version mobile*/
     min-height: 24px;
@@ -172,31 +175,36 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
     border-radius: 100%;  /*l'arrondir */
 }
 
-
-
-
+/************************cards********************/
 
 .card {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    display: flex;
+    box-sizing: border-box;
 }
 
 .card img {
     object-fit: cover;
 }
 
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+.card > div{
+    padding-left: 10px;
+}
 .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
     font-size: 16px;
 }
 
-.euro {
-    font-weight: 700;
-}
-
-.neutral-star {
-    color: var(--main-bg-color)
+.card-subtitle {
+    margin: 0;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -205,16 +213,34 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
     justify-content: space-between;
 }
 
-.hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
-    border-radius: 20px;
-    padding: 30px;
-    box-sizing: border-box;
-}
 
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+}
+.hebergements__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 5px;
+    margin-bottom: 33px;
+}
+.hebergements__card .card{
+    flex-direction: column;
+}
+
+.cardH{
+    height: 207.25px;
+    min-width: 243px;
+    box-sizing: border-box;
+    margin-top: 33px;
+}
+
+.cardH img {
+    box-sizing: border-box; /*colle une dimension à l'image de la boite bordures incluses*/
+    width: 100%; /*largeur en %age de la totalité de l'espace dispo pour s'adapter si on redimensionne*/
+    height: 114px; /*défini une hauteur pour pas que l'image ne sorte */
+    border-radius: 20px 20px 0px 0px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
 }
 
 /****** Populaires ***********/
@@ -228,10 +254,6 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
     align-items: center;
 }
 
-.populaires-cards .card {
-    display: flex;
-    margin-top: 33px;
-}
 
 .populaires-cards img {
     width: 33%;
@@ -249,18 +271,14 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
     box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
-}
-
-.populaires-cards .card-subtitle {
-    margin: 0;
+.populaires-cards .card {
+    margin-top: 33px;
 }
 
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
 
 
 
