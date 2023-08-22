@@ -22,7 +22,7 @@ body {
     box-sizing: border-box;
 }
 
-section {
+section, aside {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
@@ -279,8 +279,37 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
     margin-bottom: 5px;
 }
 
-
-
+/************activités*************/
+.activites{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+.activites__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5%;
+    width: 100%;
+}
+.cardA a {
+    flex-direction: column;
+    height: 445px;
+}
+.cardA img {                                                                                                                                                                                                  
+    width: 100%;
+    height: 389px;
+    border-radius: 20px 20px 0px 0px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
+    object-fit: cover; /*redimensionne et positionne l'image*/
+}
+.cardA h4{
+    font-size: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 10px;
+}
+.cardA .card{
+    padding: 0 !important;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
